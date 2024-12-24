@@ -1,0 +1,15 @@
+[package]
+name = "chess-rs"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+cozy-chess = "0.3.4"
+iced = { git = "https://github.com/iced-rs/iced", features = ["canvas", "tokio", "debug", "image"] }
+rand = "0.8.5"
+
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 3
